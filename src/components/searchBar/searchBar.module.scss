@@ -1,0 +1,106 @@
+@import "../../../scss/_variables.scss";
+
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 4rem;
+}
+
+.navbarContainerLight {
+  background: $white-color;
+}
+
+.navbarContainerDark {
+  background: $gray-color-4;
+}
+
+.navbarIcon {
+  width: 7rem;
+  height: min-content;
+}
+
+.searchBarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 20rem;
+  height: 2.25rem;
+  padding: 0.125rem 2rem;
+  background: $gray-color-1;
+  border-radius: 20px;
+}
+
+.searchBarContainerLight {
+  background: $gray-color-1;
+  border: 1px solid $gray-color-2;
+}
+
+.searchBarContainerLight:hover {
+  background: $white-color;
+  border: 1px solid $secondary-color;
+}
+
+.searchBarContainerDark {
+  background: $gray-color-3;
+  border: 1px solid $gray-color-2;
+}
+
+.searchBarContainerDark:hover {
+  background: $gray-color-4;
+  border: 1px solid $white-color;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: $black-color;
+}
+
+.input::placeholder {
+  color: $gray-color-2;
+}
+
+.iconContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.svgIcons {
+  color: $gray-color-2;
+}
+
+.searchButton {
+  width: auto;
+  height: 2.25rem;
+  padding: 0.125rem 2rem;
+  border: none;
+  background: $primary-color;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.searchButtonLight {
+  color: $white-color;
+}
+
+.darkColor {
+  color: $gray-color-3;
+}
+
+.darkButton {
+  color: $secondary-color;
+}
+

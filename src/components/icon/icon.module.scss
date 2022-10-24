@@ -1,0 +1,27 @@
+.icon {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.svgFillPath {
+  path {
+    fill: currentColor;
+  }
+}
+.svgFillLine {
+  line {
+    fill: currentColor;
+  }
+}
+.svgFillRect {
+  rect {
+    fill: currentColor;
+  }
+}
+.svgFillCircle {
+  circle {
+    fill: currentColor;
+  }
+}

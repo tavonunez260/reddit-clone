@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import { ButtonBar, Loader, SearchBar } from 'components'
+import { useAuth } from 'hooks'
+import { HotPage, NewPage, RisingPage } from 'pages'
+import { RootState } from 'store'
+import clsx from 'clsx'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import styles from './App.module.scss'
 
-function App() {
+const App = (): JSX.Element => {
+  const { darkMode, loading } = useSelector((state: RootState) => state.ui)
+  const { signIn } = useAuth()
+  const { pathname } = useLocation()
+  useEffect(() => {
+    signIn().then()
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={clsx(styles.container, [darkMode ? styles.containerDark : styles.containerLight])}>
+      {loading && <Loader />}
+      <SearchBar />
+      <div className={clsx(styles.contentContainer)}>
+        <ButtonBar selected={pathname} />
+        <Routes>
+          <Route path="/hot" element={<HotPage />} />
+          <Route path="/new" element={<NewPage />} />
+          <Route path="/rising" element={<RisingPage />} />
+          <Route path="/*" element={<Navigate to="/hot" replace />} />
+        </Routes>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

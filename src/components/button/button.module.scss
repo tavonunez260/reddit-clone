@@ -1,0 +1,30 @@
+@import "../../../scss/_variables.scss";
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 6rem;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.buttonContainerSelected {
+  background: $gray-color-1;
+}
+
+.iconContainer {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.svgIcons {
+  color: $gray-color-2;
+}
+
+.text {
+  text-decoration: none;
+}
