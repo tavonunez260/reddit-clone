@@ -28,8 +28,8 @@ export const useAuth = () => {
       dispatch(uiSlice.actions.setLoading(false))
       dispatch(
         authSlice.actions.setAuthInfo({
-          token: response.data.token_type,
-          type: response.data.access_token
+          token: response.data.access_token,
+          type: response.data.token_type
         })
       )
     } catch (e) {

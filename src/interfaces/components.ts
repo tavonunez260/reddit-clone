@@ -17,3 +17,11 @@ export interface ButtonProps {
   icon?: string
   selected: string
 }
+
+export interface SearchQueryResultProps {
+  title: string
+  description: string
+  tag: string
+  author: string
+  url: string
+}

@@ -1,5 +1,6 @@
 export * from './button'
 export * from './buttonBar'
+export * from './card'
 export * from './icon'
 export * from './loader'
 export * from './searchBar'
